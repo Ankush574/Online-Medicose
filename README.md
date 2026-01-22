@@ -11,7 +11,7 @@ Online Medicose is a full-featured medication management application built with 
 - **Doctor Appointments**: Book, track, and manage doctor appointments with calendar view
 - **User Profile**: Comprehensive profile with health information, emergency contacts, and document storage
 
-### Advanced Features (New in v2.0)
+### Advanced Features :-
 - **In-App Notification Center**: Real-time notifications with filtering by type (appointment, medication, health, prescription)
 - **Health Analytics Dashboard**: Visual charts showing medication adherence, health metrics, and trends
 - **Prescription Management**: Upload and manage prescriptions with expiry tracking and refill alerts
@@ -40,7 +40,7 @@ src/
 └── [Component].css             # Corresponding CSS files
 ```
 
-## 🎯 Components Overview
+## 🎯 Components Overview :-
 
 ### Authentication
 - **Login.jsx**: User login with email and password validation
@@ -97,18 +97,13 @@ src/
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 19 with React Router v6
-- **Styling**: CSS3 with responsive design (Flexbox, Grid)
+- **Frontend**: React 19 
+- **Styling**: CSS
 - **State Management**: React Hooks (useState)
 - **Browser APIs**: FileReader for uploads, Date APIs
 - **Architecture**: Component-based modular design
 
-## 📱 Responsive Design
 
-All components are fully responsive:
-- **Desktop**: Full layout with multi-column grids and sidebars
-- **Tablet**: Adjusted grid layouts with optimized spacing
-- **Mobile**: Single column layouts with touch-friendly buttons
 
 ## 🔐 Security Features
 
