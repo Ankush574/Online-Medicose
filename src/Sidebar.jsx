@@ -64,6 +64,9 @@ const Sidebar = () => {
           <span className="nav-icon">📋</span>
           <span className="nav-label">Prescriptions</span>
         </Link>
+
+          {/* Hospital Management Navigation */}
+          {/* Hospital Management Navigation */}
       </nav>
 
       <div className="sidebar-footer">

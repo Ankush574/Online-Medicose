@@ -1,5 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "./AuthContext";
+import Sidebar from "./Sidebar";
+import TopNavbar from "./TopNavbar";
 import "./PrescriptionManager.css";
 
 // Common drug interactions database
@@ -36,6 +39,7 @@ const simulateOCR = (imageName) => {
 };
 
 const PrescriptionManager = () => {
+  const { user } = useContext(AuthContext);
   const [prescriptions, setPrescriptions] = useState([
     {
       id: 1,
@@ -217,11 +221,14 @@ Notes: ${prescription.notes}
   });
 
   return (
-    <div className="prescription-manager">
-      <header className="prescription-header">
-        <h1>Prescription Management</h1>
-        <Link to="/dashboard">Back to Home</Link>
-      </header>
+    <div className="dashboard-layout">
+      <Sidebar />
+      <TopNavbar />
+      <main className="prescription-manager dashboard-main">
+        <header className="prescription-header">
+          <h1>Prescription Management</h1>
+          <Link to="/dashboard">Back to Home</Link>
+        </header>
 
       <div className="prescription-content">
         {/* Header Section */}
@@ -616,6 +623,7 @@ Notes: ${prescription.notes}
           </div>
         </div>
       )}
+      </main>
     </div>
   );
 };

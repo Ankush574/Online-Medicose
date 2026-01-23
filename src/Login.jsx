@@ -31,6 +31,26 @@ const Login = () => {
     if (!formData.email) {
       newErrors.email = "Email is required.";
     } else if (!emailRegex.test(formData.email)) {
+
+          {/* Register Hospital Button */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <Link to="/register-hospital" className="register-hospital-btn" style={{
+              display: 'inline-block',
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              color: 'white',
+              padding: '0.75rem 2rem',
+              borderRadius: '8px',
+              fontWeight: 700,
+              fontSize: '1.1rem',
+              textDecoration: 'none',
+              boxShadow: '0 4px 12px rgba(102, 126, 234, 0.15)',
+              transition: 'background 0.2s',
+            }}>
+              <span style={{ fontSize: '1.3rem', marginRight: '0.5rem' }}>➕</span>
+              Register Hospital
+            </Link>
+          </div>
+
       newErrors.email = "Please enter a valid email address.";
     }
     if (!formData.password) {

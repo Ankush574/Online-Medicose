@@ -90,9 +90,9 @@ const VideoConsultation = () => {
   const completedConsultations = consultations.filter(c => c.status === "completed");
 
   return (
-    <div className="video-consultation">
+    <main className="video-consultation-main" role="main" aria-label="Video Consultation Main Content">
       <header className="consultation-header">
-        <h1>Video Consultation</h1>
+        <h1 id="video-consultation-heading" tabIndex={0}>Video Consultation</h1>
         <Link to="/">Back to Home</Link>
       </header>
 
@@ -382,7 +382,7 @@ const VideoConsultation = () => {
           </>
         )}
       </div>
-    </div>
+    </main>
   );
 };
 

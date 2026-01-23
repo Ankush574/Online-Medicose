@@ -24,9 +24,9 @@ const Dashboard = () => {
   useEffect(() => {
     if (user && user.id) {
       try {
-        const profileData = JSON.parse(localStorage.getItem(`profile_${user.id}`)) || {};
+        const profileData = JSON.parse(localStorage.getItem(`profile_${user.id}`) || '{}');
         setProfile(profileData);
-        console.log('Profile loaded:', profileData);
+          // ...removed console.log for production...
       } catch (error) {
         console.error('Error loading profile:', error);
         setProfile({});

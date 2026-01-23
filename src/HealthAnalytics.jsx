@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "./AuthContext";
+import Sidebar from "./Sidebar";
+import TopNavbar from "./TopNavbar";
 import "./HealthAnalytics.css";
 
 const HealthAnalytics = () => {
+  const { user } = useContext(AuthContext);
   const [timeRange, setTimeRange] = useState("week"); // week, month, year
 
   // Sample data
@@ -49,68 +53,80 @@ const HealthAnalytics = () => {
   ];
 
   return (
-    <div className="health-analytics">
-      <header className="analytics-header">
-        <h1>Health Analytics & Insights</h1>
-        <Link to="/dashboard">Back to Home</Link>
-      </header>
-
-      <div className="analytics-content">
-        {/* Medication Adherence Chart */}
-        <section className="analytics-section">
-          <div className="section-header">
-            <h2>Medication Adherence</h2>
-            <div className="time-selector">
-              <button
-                className={timeRange === "week" ? "active" : ""}
-                onClick={() => setTimeRange("week")}
-              >
-                Week
-              </button>
-              <button
-                className={timeRange === "month" ? "active" : ""}
-                onClick={() => setTimeRange("month")}
-              >
-                Month
-              </button>
-              <button
-                className={timeRange === "year" ? "active" : ""}
-                onClick={() => setTimeRange("year")}
-              >
-                Year
-              </button>
+    <div className="dashboard-layout">
+      <Sidebar />
+      <TopNavbar />
+      <main className="health-analytics-main dashboard-main" role="main" aria-label="Health Analytics Main Content">
+      <section aria-labelledby="health-analytics-heading">
+        <h1 id="health-analytics-heading" tabIndex={0}>Health Analytics</h1>
+        {/* Accessible chart area */}
+        <div role="region" aria-label="Adherence Chart">
+          {/* Medication Adherence Chart */}
+          <section className="analytics-section">
+            <div className="section-header">
+              <h2>Medication Adherence</h2>
+              <div className="time-selector">
+                <button
+                  className={timeRange === "week" ? "active" : ""}
+                  onClick={() => setTimeRange("week")}
+                >
+                  Week
+                </button>
+                <button
+                  className={timeRange === "month" ? "active" : ""}
+                  onClick={() => setTimeRange("month")}
+                >
+                  Month
+                </button>
+                <button
+                  className={timeRange === "year" ? "active" : ""}
+                  onClick={() => setTimeRange("year")}
+                >
+                  Year
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div className="chart-container">
-            <div className="bar-chart">
-              {currentData.map((value, index) => (
-                <div key={index} className="bar-wrapper">
-                  <div
-                    className={`bar ${value >= 90 ? "excellent" : value >= 80 ? "good" : "fair"}`}
-                    style={{ height: `${(value / maxValue) * 100}%` }}
-                    title={`${value}%`}
-                  />
-                  <span className="bar-label">{labels[index]}</span>
+            <div className="chart-container">
+              <div className="bar-chart">
+                {currentData.map((value, index) => (
+                  <div key={index} className="bar-wrapper">
+                    <div
+                      className={`bar ${value >= 90 ? "excellent" : value >= 80 ? "good" : "fair"}`}
+                      style={{ height: `${(value / maxValue) * 100}%` }}
+                      title={`${value}%`}
+                    />
+                    <span className="bar-label">{labels[index]}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="chart-stats">
+                <div className="stat">
+                  <h3>Average Adherence</h3>
+                  <p className="stat-value">{avgAdherence}%</p>
                 </div>
-              ))}
-            </div>
-            <div className="chart-stats">
-              <div className="stat">
-                <h3>Average Adherence</h3>
-                <p className="stat-value">{avgAdherence}%</p>
-              </div>
-              <div className="stat">
-                <h3>Highest Day</h3>
-                <p className="stat-value">{Math.max(...currentData)}%</p>
-              </div>
-              <div className="stat">
-                <h3>Lowest Day</h3>
-                <p className="stat-value">{Math.min(...currentData)}%</p>
+                <div className="stat">
+                  <h3>Highest Day</h3>
+                  <p className="stat-value">{Math.max(...currentData)}%</p>
+                </div>
+                <div className="stat">
+                  <h3>Lowest Day</h3>
+                  <p className="stat-value">{Math.min(...currentData)}%</p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+        {/* Accessible medication stats list */}
+        <ul aria-label="Medication Stats">
+          {getMedicationStats().map((med, idx) => (
+            <li key={idx} tabIndex={0}>
+              <span>{med.name}</span>
+              <span>{med.dosage}</span>
+              <span aria-label={`Adherence rate for ${med.name}`}>{med.adherence}%</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Medication Performance */}
         <section className="analytics-section">
@@ -216,7 +232,8 @@ const HealthAnalytics = () => {
             <button className="export-btn">👨‍⚕️ Share with Doctor</button>
           </div>
         </section>
-      </div>
+      </section>
+      </main>
     </div>
   );
 };

@@ -1,3 +1,21 @@
+.health-analytics-main {
+  margin-left: 280px;
+  margin-top: 70px;
+  padding: 2rem;
+  flex: 1;
+  max-width: 1400px;
+  margin-right: auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.health-analytics-main h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
 .health-analytics {
   max-width: 1200px;
   margin: 0 auto;
@@ -388,6 +406,16 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .health-analytics-main {
+    margin-left: 0;
+    margin-top: 70px;
+    padding: 1rem;
+  }
+
+  .health-analytics-main h1 {
+    font-size: 2rem;
+  }
+
   .chart-container {
     flex-direction: column;
   }

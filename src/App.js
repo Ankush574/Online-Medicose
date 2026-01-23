@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
 import ProtectedRoute from './ProtectedRoute';
@@ -14,6 +15,7 @@ import DoctorDashboard from './DoctorDashboard';
 import PrescriptionManager from './PrescriptionManager';
 import VideoConsultation from './VideoConsultation';
 import MedicationRefill from './MedicationRefill';
+import HospitalManagement from './HospitalManagement';
 
 function App() {
   return (
@@ -22,11 +24,9 @@ function App() {
         <Routes>
           {/* Root route - Login page */}
           <Route path="/" element={<Login />} />
-          
           {/* Auth Routes - Public */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          
           {/* Protected Routes - Only accessible after login */}
           <Route path="/dashboard" element={<ProtectedRoute element={<Dashboard />} />} />
           <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
@@ -38,9 +38,9 @@ function App() {
           <Route path="/prescriptions" element={<ProtectedRoute element={<PrescriptionManager />} />} />
           <Route path="/video-consultation" element={<ProtectedRoute element={<VideoConsultation />} />} />
           <Route path="/medication-refill" element={<ProtectedRoute element={<MedicationRefill />} />} />
-          
-          {/* Catch all - redirect to login */}
-          <Route path="*" element={<Navigate to="/" />} />
+            {/* Hospital Management Routes */}
+            <Route path="/hospitals" element={<ProtectedRoute element={<HospitalManagement />} />} />
+
         </Routes>
       </Router>
     </AuthProvider>
