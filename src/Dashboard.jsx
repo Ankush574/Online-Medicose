@@ -57,6 +57,23 @@ const Dashboard = () => {
 
   const { greeting, icon } = getTimeBasedGreeting();
 
+  // Role-based dashboard title and subtitle
+  const getDashboardContent = () => {
+    if (user?.role === "Caretaker") {
+      return {
+        title: `${greeting}, Caretaker ${profile?.name || user?.name?.split(' ')[0] || user?.email?.split('@')[0] || 'User'} ${icon}`,
+        subtitle: "Manage your patients' health journey"
+      };
+    } else {
+      return {
+        title: `${greeting}, ${profile?.name || user?.name?.split(' ')[0] || user?.email?.split('@')[0] || 'User'} ${icon}`,
+        subtitle: "Let’s get you started with your health journey"
+      };
+    }
+  };
+
+  const { title, subtitle } = getDashboardContent();
+
   // Calculate remaining medications and next dose
   const getRemainingMedications = () => {
     const now = new Date();
@@ -163,8 +180,8 @@ const Dashboard = () => {
           </div>
         ) : (
           <div className="greeting-section">
-            <h1>{greeting}, {profile?.name || user?.name?.split(' ')[0] || user?.email?.split('@')[0] || 'User'} {icon}</h1>
-            <p>Let’s get you started with your health journey</p>
+            <h1>{title}</h1>
+            <p>{subtitle}</p>
           </div>
         )}
       </main>

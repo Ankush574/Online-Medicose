@@ -31,26 +31,6 @@ const Login = () => {
     if (!formData.email) {
       newErrors.email = "Email is required.";
     } else if (!emailRegex.test(formData.email)) {
-
-          {/* Register Hospital Button */}
-          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-            <Link to="/register-hospital" className="register-hospital-btn" style={{
-              display: 'inline-block',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              color: 'white',
-              padding: '0.75rem 2rem',
-              borderRadius: '8px',
-              fontWeight: 700,
-              fontSize: '1.1rem',
-              textDecoration: 'none',
-              boxShadow: '0 4px 12px rgba(102, 126, 234, 0.15)',
-              transition: 'background 0.2s',
-            }}>
-              <span style={{ fontSize: '1.3rem', marginRight: '0.5rem' }}>➕</span>
-              Register Hospital
-            </Link>
-          </div>
-
       newErrors.email = "Please enter a valid email address.";
     }
     if (!formData.password) {
@@ -90,7 +70,12 @@ const Login = () => {
       };
       login(userData);
       setSuccess("Login successful! Welcome back.");
-      navigate("/dashboard");
+      // Redirect based on role
+      if (formData.role === "Doctor") {
+        navigate("/doctor-dashboard");
+      } else {
+        navigate("/dashboard");
+      }
     } catch (error) {
       setErrors({ general: "Login failed. Please check your credentials." });
     } finally {
@@ -147,8 +132,8 @@ const Login = () => {
             onChange={handleChange}
             className={errors.role ? "error-input" : ""}
           >
-            <option value="User">User</option>
-            <option value="Caretaker">Caretaker</option>
+            <option value="user">User</option>
+            <option value="Pharmacist">Pharmacist</option>
             <option value="Doctor">Doctor</option>
           </select>
           {errors.role && <span className="error">{errors.role}</span>}

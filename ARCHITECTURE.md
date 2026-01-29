@@ -44,6 +44,38 @@ App (Router)
 └── MedicationRefill Route (/medication-refill)
 ```
 
+#### DoctorDashboard Route (/doctor-dashboard)
+Purpose: Doctor’s workspace.
+
+Includes:
+- Patient list & profiles
+- Health analytics overview
+- Active prescriptions
+- Consultation history
+- Notifications & alerts
+
+#### VideoConsultation Route (/video-consultation)
+Purpose: Real-time virtual doctor–patient interaction.
+
+Features:
+- Secure video calls
+- Appointment scheduling
+- Chat & file sharing
+- Consultation reminders via notifications
+
+👉 Notifications are pushed before and after sessions.
+
+#### MedicationRefill Route (/medication-refill)
+Purpose: Ensures patients never miss medicines.
+
+Capabilities:
+- Auto refill reminders
+- Refill request tracking
+- Pharmacy integration (future-ready)
+- Stock & refill status alerts
+
+👉 Strongly tied to PrescriptionManager and NotificationCenter.
+
 ## State Management Strategy
 
 ### Current Implementation (Local State with Hooks)
@@ -296,6 +328,13 @@ Tabs:
 4. Reports
    - Report types
    - Generate options
+
+Includes:
+- Patient list & profiles
+- Health analytics overview
+- Active prescriptions
+- Consultation history
+- Notifications & alerts
 
 Methods:
 - getAdherenceColor(value)

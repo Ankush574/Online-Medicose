@@ -134,6 +134,26 @@ const MedicationRefill = () => {
       </header>
 
       <div className="refill-content">
+        <section className="route-overview" aria-labelledby="medication-refill-overview">
+          <h2 id="medication-refill-overview">Route Overview</h2>
+          <div className="route-overview-grid">
+            <div className="route-card">
+              <h3>Purpose</h3>
+              <p>Ensures patients never miss medicines.</p>
+            </div>
+            <div className="route-card">
+              <h3>Capabilities</h3>
+              <ul className="route-list">
+                <li>Auto refill reminders</li>
+                <li>Refill request tracking</li>
+                <li>Pharmacy integration (future-ready)</li>
+                <li>Stock & refill status alerts</li>
+              </ul>
+              <p className="route-note">👉 Strongly tied to PrescriptionManager and NotificationCenter.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Actions Bar */}
         <div className="quick-actions-bar">
           <button

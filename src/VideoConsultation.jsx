@@ -152,6 +152,26 @@ const VideoConsultation = () => {
         {/* Schedule Form */}
         {!selectedConsultation && (
           <>
+            <section className="route-overview" aria-labelledby="video-consultation-overview">
+              <h2 id="video-consultation-overview">Route Overview</h2>
+              <div className="route-overview-grid">
+                <div className="route-card">
+                  <h3>Purpose</h3>
+                  <p>Real-time virtual doctor–patient interaction.</p>
+                </div>
+                <div className="route-card">
+                  <h3>Features</h3>
+                  <ul className="route-list">
+                    <li>Secure video calls</li>
+                    <li>Appointment scheduling</li>
+                    <li>Chat & file sharing</li>
+                    <li>Consultation reminders via notifications</li>
+                  </ul>
+                  <p className="route-note">👉 Notifications are pushed before and after sessions.</p>
+                </div>
+              </div>
+            </section>
+
             <div className="consultation-top">
               <button
                 className="schedule-btn"
