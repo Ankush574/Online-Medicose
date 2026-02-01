@@ -5,7 +5,8 @@ import Layout from "./Layout";
 
 const roleHomeMap = {
   Doctor: "/doctor-dashboard",
-  Pharmacist: "/pharmacist-dashboard"
+  Pharmacist: "/pharmacist-dashboard",
+  Admin: "/admin-dashboard"
 };
 
 const ProtectedRoute = ({ element, allowedRoles = [] }) => {

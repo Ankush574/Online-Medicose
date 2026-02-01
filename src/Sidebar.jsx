@@ -10,9 +10,11 @@ const Sidebar = () => {
   const { isOpen, closeSidebar } = useSidebar();
   const isDoctor = user?.role === "Doctor";
   const isPharmacist = user?.role === "Pharmacist";
+    const isAdmin = user?.role === "Admin";
   const searchParams = React.useMemo(() => new URLSearchParams(location.search), [location.search]);
   const doctorSidebarTab = isDoctor && location.pathname === "/doctor-dashboard" ? searchParams.get('tab') : null;
   const pharmacistSidebarTab = isPharmacist && location.pathname === "/pharmacist-dashboard" ? searchParams.get('tab') : null;
+    const adminSidebarTab = isAdmin && location.pathname === "/admin-dashboard" ? searchParams.get('tab') : null;
 
   const doctorNavItems = [
     { tab: 'overview', label: 'Overview', icon: '📊' },
@@ -28,6 +30,15 @@ const Sidebar = () => {
     { tab: 'inventory', label: 'Inventory', icon: '📦' },
     { tab: 'refills', label: 'Refill Requests', icon: '🔄' },
     { tab: 'settings', label: 'Settings', icon: '⚙️' }
+  ];
+
+  const adminNavItems = [
+    { tab: 'overview', label: 'Overview', icon: '📊' },
+    { tab: 'users', label: 'User Management', icon: '👥' },
+    { tab: 'approvals', label: 'Approvals', icon: '✅' },
+    { tab: 'orders', label: 'Orders & Payments', icon: '💳' },
+    { tab: 'analytics', label: 'Analytics & Reports', icon: '📈' },
+    { tab: 'settings', label: 'Platform Settings', icon: '⚙️' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -47,7 +58,7 @@ const Sidebar = () => {
       <div className="sidebar-accent" aria-hidden="true" />
 
       <nav className="sidebar-nav">
-        {!isDoctor && !isPharmacist && (
+        {!isDoctor && !isPharmacist && !isAdmin && (
           <>
             <Link
               to="/dashboard"
@@ -223,6 +234,27 @@ const Sidebar = () => {
                 to={`/pharmacist-dashboard?tab=${item.tab}`}
                 className={`nav-item ${
                   location.pathname === "/pharmacist-dashboard" && pharmacistSidebarTab === item.tab
+                    ? "active"
+                    : ""
+                }`}
+                onClick={closeSidebar}
+              >
+                <span className="nav-icon">{item.icon}</span>
+                <span className="nav-label">{item.label}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {user?.role === "Admin" && (
+          <div className="nav-section">
+            <div className="nav-section-title">Admin Console</div>
+            {adminNavItems.map((item) => (
+              <Link
+                key={item.tab}
+                to={`/admin-dashboard?tab=${item.tab}`}
+                className={`nav-item ${
+                  location.pathname === "/admin-dashboard" && adminSidebarTab === item.tab
                     ? "active"
                     : ""
                 }`}

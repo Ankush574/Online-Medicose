@@ -16,6 +16,7 @@ import Appointments from './Appointments';
 import NotificationCenter from './NotificationCenter';
 import HealthAnalytics from './HealthAnalytics';
 import DoctorDashboard from './DoctorDashboard';
+import AdminDashboard from './AdminDashboard';
 import PrescriptionManager from './PrescriptionManager';
 import VideoConsultation from './VideoConsultation';
 import MedicationRefill from './MedicationRefill';
@@ -63,6 +64,10 @@ function App() {
             <Route
               path="/doctor-dashboard"
               element={<ProtectedRoute allowedRoles={["Doctor"]} element={<DoctorDashboard />} />}
+            />
+            <Route
+              path="/admin-dashboard"
+              element={<ProtectedRoute allowedRoles={["Admin"]} element={<AdminDashboard />} />}
             />
             <Route
               path="/pharmacist-dashboard"

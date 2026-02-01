@@ -52,11 +52,12 @@ const Login = () => {
       await new Promise((resolve, reject) => {
         setTimeout(() => {
           // Mock authentication: accept any email/password for demo
-          if (formData.email && formData.password) {
-            resolve();
-          } else {
+          if (!formData.email || !formData.password) {
             reject(new Error("Invalid credentials"));
+            return;
           }
+
+          resolve();
         }, 1000); // 1 second delay
       });
       
@@ -75,7 +76,8 @@ const Login = () => {
       // Redirect based on role
       const roleRedirectMap = {
         Doctor: "/doctor-dashboard",
-        Pharmacist: "/pharmacist-dashboard"
+        Pharmacist: "/pharmacist-dashboard",
+        Admin: "/admin-dashboard"
       };
       navigate(roleRedirectMap[roleDisplay] || "/dashboard");
     } catch (error) {
@@ -137,6 +139,7 @@ const Login = () => {
             <option value="User">User</option>
             <option value="Pharmacist">Pharmacist</option>
             <option value="Doctor">Doctor</option>
+            <option value="Admin">Admin</option>
           </select>
           {errors.role && <span className="error">{errors.role}</span>}
         </div>
