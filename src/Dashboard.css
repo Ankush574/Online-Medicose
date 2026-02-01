@@ -10,7 +10,7 @@
   --dashboard-accent: #f0f4ff;
 }
 
-body.dark-mode :root {
+.dark :root {
   --dashboard-bg: #020617;
   --dashboard-card: #0b1120;
   --dashboard-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
@@ -276,22 +276,20 @@ body.dark-mode :root {
   font-size: 0.9rem;
 }
 
-body.dark-mode .dashboard-placeholder__card,
-body.dark-mode .dashboard-stat-card,
-body.dark-mode .dashboard-insights__activity,
-body.dark-mode .dashboard-loader {
+.dark .dashboard-placeholder__card,
+.dark .dashboard-stat-card,
+.dark .dashboard-insights__activity,
+.dark .dashboard-loader {
   background: #0b1120;
   border-color: rgba(148, 163, 184, 0.35);
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.65);
 }
-
-body.dark-mode .dashboard-stat-card__value,
-body.dark-mode .activity-row__title {
+.dark .dashboard-stat-card__value,
+.dark .activity-row__title {
   color: #f8fafc;
 }
-
-body.dark-mode .dashboard-placeholder__card p,
-body.dark-mode .activity-row__meta {
+.dark .dashboard-placeholder__card p,
+.dark .activity-row__meta {
   color: #9ca3af;
 }
 

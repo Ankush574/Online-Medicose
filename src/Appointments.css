@@ -131,26 +131,26 @@
 }
 
 .appointments-lede {
-body.dark-mode .prep-card,
-body.dark-mode .availability-card {
+.dark .prep-card,
+.dark .availability-card {
   background: rgba(15, 23, 42, 0.85);
   border-color: rgba(71, 85, 105, 0.6);
   box-shadow: 0 20px 45px rgba(2, 6, 23, 0.85);
 }
-body.dark-mode .prep-task-list strong,
-body.dark-mode .availability-list strong {
+.dark .prep-task-list strong,
+.dark .availability-list strong {
   color: #e2e8f0;
 }
-body.dark-mode .prep-task-list p,
-body.dark-mode .availability-list p,
-body.dark-mode .availability-meta span,
-body.dark-mode .prep-progress span {
+.dark .prep-task-list p,
+.dark .availability-list p,
+.dark .availability-meta span,
+.dark .prep-progress span {
   color: #cbd5f5;
 }
-body.dark-mode .prep-progress__rail {
+.dark .prep-progress__rail {
   background: rgba(148, 163, 184, 0.35);
 }
-body.dark-mode .slot-chip {
+.dark .slot-chip {
   background: rgba(99, 102, 241, 0.25);
   color: #c7d2fe;
 }

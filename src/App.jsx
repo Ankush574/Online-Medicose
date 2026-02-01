@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './AuthContext';
 import { ThemeProvider } from './ThemeContext';
 import { SidebarProvider } from './SidebarContext';
+import Layout from './Layout';
 import ProtectedRoute from './ProtectedRoute';
 import ErrorBoundary from './ErrorBoundary';
 import Dashboard from './Dashboard';
@@ -30,8 +31,9 @@ function App() {
       <ThemeProvider>
         <SidebarProvider>
           <Router>
-          <ErrorBoundary>
-            <Routes>
+            <Layout>
+              <ErrorBoundary>
+                <Routes>
             {/* Root route - Login page */}
             <Route path="/" element={<Login />} />
             {/* Auth Routes - Public */}
@@ -67,9 +69,10 @@ function App() {
               element={<ProtectedRoute allowedRoles={["Pharmacist"]} element={<PharmacistDashboard />} />}
             />
 
-            </Routes>
-          </ErrorBoundary>
-        </Router>
+                </Routes>
+              </ErrorBoundary>
+            </Layout>
+          </Router>
         </SidebarProvider>
       </ThemeProvider>
     </AuthProvider>

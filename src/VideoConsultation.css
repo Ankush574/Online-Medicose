@@ -1,20 +1,17 @@
-body.dark-mode .video-consultation-main {
+.dark .video-consultation-main {
   background: radial-gradient(circle at top, rgba(30, 41, 59, 0.66), #020617 65%);
 }
-
-body.dark-mode .consultation-hero {
+.dark .consultation-hero {
   background: rgba(15, 23, 42, 0.92);
   box-shadow: 0 40px 80px rgba(2, 6, 23, 0.8);
 }
-
-body.dark-mode .consultation-hero h1,
-body.dark-mode .consultation-hero .subcopy,
-body.dark-mode .consultation-hero .eyebrow {
+.dark .consultation-hero h1,
+.dark .consultation-hero .subcopy,
+.dark .consultation-hero .eyebrow {
   color: #e2e8f0;
 }
-
-body.dark-mode .ghost-btn,
-body.dark-mode .link-pill {
+.dark .ghost-btn,
+.dark .link-pill {
   border-color: rgba(148, 163, 184, 0.4);
   color: #cbd5f5;
 }

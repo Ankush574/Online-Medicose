@@ -3,7 +3,7 @@ import "./Layout.css";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="layout layout-shell">
       {children}
     </div>
   );

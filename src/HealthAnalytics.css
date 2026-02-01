@@ -498,25 +498,21 @@
   transition: all 0.3s ease;
 }
 
-body.dark-mode .analytics-hero {
+.dark .analytics-hero {
   background: rgba(15, 23, 42, 0.85);
   box-shadow: 0 35px 60px rgba(2, 6, 23, 0.75);
 }
-
-body.dark-mode .analytics-hero h1,
-body.dark-mode .analytics-hero .subcopy {
+.dark .analytics-hero h1,
+.dark .analytics-hero .subcopy {
   color: #e2e8f0;
 }
-
-body.dark-mode .analytics-hero .eyebrow {
+.dark .analytics-hero .eyebrow {
   color: #a5b4fc;
 }
-
-body.dark-mode .medication-stats-list {
+.dark .medication-stats-list {
   background: rgba(15, 23, 42, 0.9);
 }
-
-body.dark-mode .medication-stats-list li {
+.dark .medication-stats-list li {
   color: #cbd5f5;
   border-bottom-color: rgba(99, 102, 241, 0.35);
 }

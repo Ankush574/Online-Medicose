@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import Sidebar from "./Sidebar";
 import TopNavbar from "./TopNavbar";
@@ -13,6 +13,7 @@ import VideoConsultation from "./VideoConsultation";
 import NotificationCenter from "./NotificationCenter";
 import HospitalManagement from "./HospitalManagement";
 import OrderHistory from "./OrderHistory";
+import Settings from "./Settings";
 import "./Dashboard.css";
 
 // View Components
@@ -187,6 +188,7 @@ const DashboardLanding = ({ title, subtitle, features, quickStats, recentActivit
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [profile, setProfile] = useState(null);
 
@@ -209,6 +211,24 @@ const Dashboard = () => {
       }
     }
   }, [user]);
+
+  // Apply user dashboard default landing view when visiting /dashboard
+  useEffect(() => {
+    if (!user || !user.id) return;
+    if (location.pathname !== "/dashboard") return;
+
+    try {
+      const raw = localStorage.getItem(`settings_${user.id}`);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      const defaultView = parsed?.preferences?.userDashboardDefault;
+      if (defaultView && defaultView !== "home") {
+        navigate(`/dashboard/${defaultView}`);
+      }
+    } catch (error) {
+      console.error("Error applying dashboard settings:", error);
+    }
+  }, [user, location.pathname, navigate]);
 
   // Get time-based greeting
   const getTimeBasedGreeting = () => {
@@ -289,6 +309,7 @@ const Dashboard = () => {
             <Route path="consultation" element={<ConsultationView />} />
             <Route path="notifications" element={<NotificationsView />} />
             <Route path="hospitals" element={<HospitalsView />} />
+            <Route path="settings" element={<Settings />} />
           </Routes>
         )}
       </main>

@@ -427,88 +427,88 @@
 }
 
 /* Dark Mode Styles */
-.dark-mode .dashboard-layout {
+.dark .dashboard-layout {
   background: #111827;
 }
 
-.dark-mode .welcome-card {
+.dark .welcome-card {
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   color: #f1f5f9;
 }
 
-.dark-mode .stat-card {
+.dark .stat-card {
   background: #1f2937;
   border-color: #374151;
 }
 
-.dark-mode .stat-card-hover:hover {
+.dark .stat-card-hover:hover {
   border-color: #a855f7;
   box-shadow: 0 12px 30px rgba(168, 85, 247, 0.2);
 }
 
-.dark-mode .stat-label {
+.dark .stat-label {
   color: #9ca3af;
 }
 
-.dark-mode .stat-value {
+.dark .stat-value {
   color: #a855f7;
 }
 
-.dark-mode .stat-subtext {
+.dark .stat-subtext {
   color: #6b7280;
 }
 
-.dark-mode .progress-bar {
+.dark .progress-bar {
   background: #374151;
 }
 
-.dark-mode .medications-section {
+.dark .medications-section {
   background: #1f2937;
   color: #f1f5f9;
 }
 
-.dark-mode .section-header h2 {
+.dark .section-header h2 {
   color: #f1f5f9;
 }
 
-.dark-mode .medication-item {
+.dark .medication-item {
   background: #374151;
   color: #f1f5f9;
 }
 
-.dark-mode .medication-item:hover {
+.dark .medication-item:hover {
   background: #4b5563;
 }
 
-.dark-mode .medication-item.taken {
+.dark .medication-item.taken {
   background: #064e3b;
 }
 
-.dark-mode .medication-item.taken:hover {
+.dark .medication-item.taken:hover {
   background: #065f46;
 }
 
-.dark-mode .med-details h3 {
+.dark .med-details h3 {
   color: #f1f5f9;
 }
 
-.dark-mode .med-details p {
+.dark .med-details p {
   color: #9ca3af;
 }
 
-.dark-mode .take-med-btn {
+.dark .take-med-btn {
   background: linear-gradient(135deg, #a855f7, #ec4899);
 }
 
-.dark-mode .take-med-btn:hover {
+.dark .take-med-btn:hover {
   background: linear-gradient(135deg, #9333ea, #db2777);
 }
 
-.dark-mode .empty-state {
+.dark .empty-state {
   color: #9ca3af;
 }
 
-.dark-mode .empty-state h3 {
+.dark .empty-state h3 {
   color: #f1f5f9;
 }
 
@@ -634,33 +634,33 @@
 }
 
 /* Dark mode for timeline */
-.dark-mode .timeline-time .time {
+.dark .timeline-time .time {
   background: #374151;
   color: #a855f7;
 }
 
-.dark-mode .timeline-content {
+.dark .timeline-content {
   background: #374151;
   color: #f1f5f9;
 }
 
-.dark-mode .timeline-content.completed {
+.dark .timeline-content.completed {
   background: #064e3b;
 }
 
-.dark-mode .timeline-content h4 {
+.dark .timeline-content h4 {
   color: #f1f5f9;
 }
 
-.dark-mode .timeline-content p {
+.dark .timeline-content p {
   color: #9ca3af;
 }
 
-.dark-mode .timeline-line {
+.dark .timeline-line {
   background: #4b5563;
 }
 
-.dark-mode .timeline-dot {
+.dark .timeline-dot {
   border-color: #1f2937;
 }
 .modal-overlay {
@@ -687,7 +687,7 @@
   animation: slideUp 0.3s ease;
 }
 
-.dark-mode .modal-content {
+.dark .modal-content {
   background: #1f2937;
   color: #f1f5f9;
 }
@@ -703,7 +703,7 @@
   border-radius: 15px 15px 0 0;
 }
 
-.dark-mode .modal-header {
+.dark .modal-header {
   background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
   border-bottom-color: #374151;
 }
@@ -748,7 +748,7 @@
   color: #667eea;
 }
 
-.dark-mode .about-section h3 {
+.dark .about-section h3 {
   color: #a855f7;
 }
 
@@ -762,7 +762,7 @@
   color: #555;
 }
 
-.dark-mode .about-section li {
+.dark .about-section li {
   color: #d1d5db;
 }
 
@@ -772,7 +772,7 @@
   color: #555;
 }
 
-.dark-mode .about-section p {
+.dark .about-section p {
   color: #d1d5db;
 }
 

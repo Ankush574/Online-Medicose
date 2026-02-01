@@ -417,49 +417,45 @@
   }
 }
 
-body.dark-mode .refill-shell,
-body.dark-mode .requests-board,
-body.dark-mode .inventory-board,
-body.dark-mode .composer-panel,
-body.dark-mode .secondary-card,
-body.dark-mode .refill-metric-card,
-body.dark-mode .inventory-card,
-body.dark-mode .request-card {
+.dark .refill-shell,
+.dark .requests-board,
+.dark .inventory-board,
+.dark .composer-panel,
+.dark .secondary-card,
+.dark .refill-metric-card,
+.dark .inventory-card,
+.dark .request-card {
   background: rgba(15, 23, 42, 0.92);
   color: #e2e8f0;
   border-color: rgba(148, 163, 184, 0.2);
   box-shadow: 0 45px 95px rgba(2, 6, 23, 0.8);
 }
 
-body.dark-mode .metric-label,
-body.dark-mode .metric-meta,
-body.dark-mode .muted,
-body.dark-mode .automation-list p,
-body.dark-mode .pharmacy-list p {
+.dark .metric-label,
+.dark .metric-meta,
+.dark .muted,
+.dark .automation-list p,
+.dark .pharmacy-list p {
   color: #cbd5f5;
 }
 
-body.dark-mode .primary-btn {
+.dark .primary-btn {
   background: rgba(255, 255, 255, 0.2);
   color: #e0e7ff;
 }
 
-body.dark-mode .ghost-btn {
+.dark .ghost-btn {
   border-color: rgba(226, 232, 240, 0.35);
   color: #e0e7ff;
 }
 
-body.dark-mode .composer-placeholder {
+.dark .composer-placeholder {
   background: rgba(99, 102, 241, 0.12);
   color: #c7d2fe;
 }
 
-body.dark-mode .progress-track {
+.dark .progress-track {
   background: rgba(148, 163, 184, 0.35);
-}.medication-refill {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding-bottom: 40px;
 }
 
 .refill-header {

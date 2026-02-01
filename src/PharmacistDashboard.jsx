@@ -6,6 +6,7 @@ import TopNavbar from "./TopNavbar";
 import Card from "./components/Card";
 import Button from "./components/Button";
 import StatCard from "./components/StatCard";
+import Settings from "./Settings";
 import "./PharmacistDashboard.css";
 
 const PharmacistDashboard = () => {
@@ -231,7 +232,8 @@ const PharmacistDashboard = () => {
     { id: "overview", label: "Overview", icon: "📊" },
     { id: "prescriptions", label: "Prescriptions", icon: "💊" },
     { id: "inventory", label: "Inventory", icon: "📦" },
-    { id: "refills", label: "Refill Requests", icon: "🔄" }
+    { id: "refills", label: "Refill Requests", icon: "🔄" },
+    { id: "settings", label: "Settings", icon: "⚙️" }
   ];
   const isValidTab = tabs.some((tab) => tab.id === selectedTab);
   const pharmacistFeatureCatalog = [
@@ -967,6 +969,13 @@ const PharmacistDashboard = () => {
                       ))}
                     </div>
                   </Card>
+                </div>
+              )}
+
+              {/* Settings Tab */}
+              {selectedTab === "settings" && (
+                <div className="space-y-6">
+                  <Settings />
                 </div>
               )}
             </>

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
-import { useTheme } from "./ThemeContext";
 import { useSidebar } from "./SidebarContext";
 import NotificationCenter, { notificationSeed } from "./NotificationCenter";
 import "./TopNavbar.css";
@@ -9,14 +8,23 @@ import "./TopNavbar.css";
 const TopNavbar = () => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  const { mode, toggleMode } = useTheme();
   const { isOpen: isSidebarOpen, toggleSidebar } = useSidebar();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [notifications, setNotifications] = useState(notificationSeed);
 
-  const isDarkMode = mode === "dark";
   const unreadCount = notifications.filter(notification => !notification.read).length;
+
+  const handleOpenSettings = () => {
+    if (user?.role === "Doctor") {
+      navigate("/doctor-dashboard?tab=settings");
+    } else if (user?.role === "Pharmacist") {
+      navigate("/pharmacist-dashboard?tab=settings");
+    } else {
+      navigate("/dashboard/settings");
+    }
+    setShowUserMenu(false);
+  };
 
   return (
     <header className="top-navbar">
@@ -74,19 +82,11 @@ const TopNavbar = () => {
               <div className="user-menu-divider"></div>
               <button
                 className="user-menu-item"
-                onClick={() => {
-                  navigate("/profile");
-                  setShowUserMenu(false);
-                }}
+                onClick={handleOpenSettings}
               >
                 ⚙️ Settings
               </button>
-              <button
-                className="user-menu-item"
-                onClick={toggleMode}
-              >
-                {isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-              </button>
+              {/* Theme toggle removed; app uses a single light theme now. */}
               <div className="user-menu-divider"></div>
               <button
                 className="user-menu-item logout-btn"

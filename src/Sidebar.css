@@ -192,30 +192,25 @@
 }
 
 /* Dark mode overrides */
-body.dark-mode .sidebar {
+.dark .sidebar {
   background: linear-gradient(180deg, #020617 0%, #0f172a 55%, #1e1b4b 100%);
   border-right-color: rgba(15, 23, 42, 0.8);
   box-shadow: 12px 0 35px rgba(0, 0, 0, 0.65);
 }
-
-body.dark-mode .nav-section {
+.dark .nav-section {
   background: rgba(15, 23, 42, 0.65);
 }
-
-body.dark-mode .nav-item {
+.dark .nav-item {
   color: rgba(226, 232, 240, 0.85);
 }
-
-body.dark-mode .nav-item:hover {
+.dark .nav-item:hover {
   border-left-color: rgba(56, 189, 248, 0.7);
   color: #f8fafc;
 }
-
-body.dark-mode .nav-item.active {
+.dark .nav-item.active {
   background: rgba(56, 189, 248, 0.15);
   border-left-color: #38bdf8;
 }
-
-body.dark-mode .sidebar-tagline {
+.dark .sidebar-tagline {
   color: rgba(226, 232, 240, 0.65);
 }

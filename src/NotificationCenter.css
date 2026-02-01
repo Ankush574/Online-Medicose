@@ -485,46 +485,40 @@
   }
 }
 
-body.dark-mode .notification-main {
+.dark .notification-main {
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85), #030712 70%);
 }
-
-body.dark-mode .notification-hero,
-body.dark-mode .notification-metric-card,
-body.dark-mode .notification-control-bar,
-body.dark-mode .notification-feed,
-body.dark-mode .panel-card {
+.dark .notification-hero,
+.dark .notification-metric-card,
+.dark .notification-control-bar,
+.dark .notification-feed,
+.dark .panel-card {
   background: rgba(15, 23, 42, 0.88);
   box-shadow: 0 35px 80px rgba(2, 6, 23, 0.85);
 }
-
-body.dark-mode .notification-hero h1,
-body.dark-mode .notification-hero .subcopy,
-body.dark-mode .notification-hero .eyebrow,
-body.dark-mode .metric-label,
-body.dark-mode .metric-value,
-body.dark-mode .metric-meta,
-body.dark-mode .panel-card h3,
-body.dark-mode .panel-card ul li,
-body.dark-mode .timeline li small {
+.dark .notification-hero h1,
+.dark .notification-hero .subcopy,
+.dark .notification-hero .eyebrow,
+.dark .metric-label,
+.dark .metric-value,
+.dark .metric-meta,
+.dark .panel-card h3,
+.dark .panel-card ul li,
+.dark .timeline li small {
   color: #e2e8f0;
 }
-
-body.dark-mode .channel-toggle {
+.dark .channel-toggle {
   background: rgba(15, 23, 42, 0.7);
   border-color: rgba(99, 102, 241, 0.2);
 }
-
-body.dark-mode .channel-toggle span small {
+.dark .channel-toggle span small {
   color: #94a3b8;
 }
-
-body.dark-mode .timeline li {
+.dark .timeline li {
   border-left-color: rgba(99, 102, 241, 0.45);
 }
-
-body.dark-mode .ghost-btn,
-body.dark-mode .link-pill {
+.dark .ghost-btn,
+.dark .link-pill {
   border-color: rgba(148, 163, 184, 0.4);
   color: #cbd5f5;
 }

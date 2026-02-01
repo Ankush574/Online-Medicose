@@ -387,62 +387,54 @@
 	}
 }
 
-body.dark-mode .medications-shell,
-body.dark-mode .medications-hero,
-body.dark-mode .medication-board,
-body.dark-mode .schedule-section,
-body.dark-mode .composer-card,
-body.dark-mode .refill-alert-card,
-body.dark-mode .tips-card,
-body.dark-mode .medication-metric-card,
-body.dark-mode .medication-card {
+.dark .medications-shell,
+.dark .medications-hero,
+.dark .medication-board,
+.dark .schedule-section,
+.dark .composer-card,
+.dark .refill-alert-card,
+.dark .tips-card,
+.dark .medication-metric-card,
+.dark .medication-card {
 	background: rgba(15, 23, 42, 0.92);
 	color: #e2e8f0;
 	border-color: rgba(148, 163, 184, 0.2);
 	box-shadow: 0 35px 80px rgba(2, 6, 23, 0.85);
 }
-
-body.dark-mode .medication-card dd,
-body.dark-mode .metric-value,
-body.dark-mode .schedule-list strong {
+.dark .medication-card dd,
+.dark .metric-value,
+.dark .schedule-list strong {
 	color: #f8fafc;
 }
-
-body.dark-mode .metric-label,
-body.dark-mode .metric-meta,
-body.dark-mode .medication-card dt,
-body.dark-mode .schedule-meta,
-body.dark-mode .alert-list li p,
-body.dark-mode .tips-card li p {
+.dark .metric-label,
+.dark .metric-meta,
+.dark .medication-card dt,
+.dark .schedule-meta,
+.dark .alert-list li p,
+.dark .tips-card li p {
 	color: #cbd5f5;
 }
-
-body.dark-mode .schedule-list li,
-body.dark-mode .medication-card {
+.dark .schedule-list li,
+.dark .medication-card {
 	background: rgba(15, 23, 42, 0.65);
 }
-
-body.dark-mode .primary-btn {
+.dark .primary-btn {
 	background: rgba(255, 255, 255, 0.15);
 	color: #e0e7ff;
 }
-
-body.dark-mode .ghost-btn {
+.dark .ghost-btn {
 	border-color: rgba(148, 163, 184, 0.3);
 	color: #e0e7ff;
 }
-
-body.dark-mode .chip {
+.dark .chip {
 	background: rgba(148, 163, 184, 0.2);
 	color: #e2e8f0;
 }
-
-body.dark-mode .chip-success {
+.dark .chip-success {
 	background: rgba(34, 197, 94, 0.2);
 	color: #bbf7d0;
 }
-
-body.dark-mode .chip-warning {
+.dark .chip-warning {
 	background: rgba(234, 179, 8, 0.25);
 	color: #fde68a;
 }

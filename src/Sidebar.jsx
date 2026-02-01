@@ -18,14 +18,16 @@ const Sidebar = () => {
     { tab: 'overview', label: 'Overview', icon: '📊' },
     { tab: 'patients', label: 'Patients', icon: '👥' },
     { tab: 'appointments', label: 'Appointments', icon: '📅' },
-    { tab: 'prescriptions', label: 'Prescriptions', icon: '💊' }
+    { tab: 'prescriptions', label: 'Prescriptions', icon: '💊' },
+    { tab: 'settings', label: 'Settings', icon: '⚙️' }
   ];
 
   const pharmacistNavItems = [
     { tab: 'overview', label: 'Overview', icon: '📊' },
     { tab: 'prescriptions', label: 'Prescriptions', icon: '💊' },
     { tab: 'inventory', label: 'Inventory', icon: '📦' },
-    { tab: 'refills', label: 'Refill Requests', icon: '🔄' }
+    { tab: 'refills', label: 'Refill Requests', icon: '🔄' },
+    { tab: 'settings', label: 'Settings', icon: '⚙️' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -177,6 +179,15 @@ const Sidebar = () => {
               >
                 <span className="nav-icon">🔔</span>
                 <span className="nav-label">Notifications</span>
+              </Link>
+
+              <Link
+                to="/dashboard/settings"
+                className={`nav-item ${location.pathname === "/dashboard/settings" ? "active" : ""}`}
+                onClick={closeSidebar}
+              >
+                <span className="nav-icon">⚙️</span>
+                <span className="nav-label">Settings</span>
               </Link>
             </div>
           </>

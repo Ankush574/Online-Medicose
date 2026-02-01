@@ -21,7 +21,7 @@ const Card = ({
     large: 'shadow-lg',
   };
 
-  const classes = `bg-white border border-gray-200 rounded-lg ${paddingClasses[padding]} ${shadowClasses[shadow]} ${className}`;
+  const classes = `card-surface ${paddingClasses[padding]} ${shadowClasses[shadow]} ${className}`;
 
   return (
     <div className={classes} {...props}>

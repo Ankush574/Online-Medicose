@@ -336,47 +336,43 @@
   color: #64748b;
 }
 
-body.dark-mode .hospital-management,
-body.dark-mode .hospital-hero,
-body.dark-mode .hospital-metric-card,
-body.dark-mode .hospital-search-panel,
-body.dark-mode .hospital-list-card,
-body.dark-mode .hospital-detail-card,
-body.dark-mode .hospital-form,
-body.dark-mode .occupancy-card,
-body.dark-mode .hospital-widget {
+.dark .hospital-management,
+.dark .hospital-hero,
+.dark .hospital-metric-card,
+.dark .hospital-search-panel,
+.dark .hospital-list-card,
+.dark .hospital-detail-card,
+.dark .hospital-form,
+.dark .occupancy-card,
+.dark .hospital-widget {
   background: rgba(15, 23, 42, 0.92);
   box-shadow: 0 35px 80px rgba(2, 6, 23, 0.85);
 }
-
-body.dark-mode .hospital-hero h1,
-body.dark-mode .hospital-hero .subcopy,
-body.dark-mode .metric-label,
-body.dark-mode .metric-value,
-body.dark-mode .metric-meta,
-body.dark-mode .hospital-name,
-body.dark-mode .hospital-meta,
-body.dark-mode .hospital-details,
-body.dark-mode .doctor-roster li,
-body.dark-mode .hospital-form label,
-body.dark-mode .hospital-widget {
+.dark .hospital-hero h1,
+.dark .hospital-hero .subcopy,
+.dark .metric-label,
+.dark .metric-value,
+.dark .metric-meta,
+.dark .hospital-name,
+.dark .hospital-meta,
+.dark .hospital-details,
+.dark .doctor-roster li,
+.dark .hospital-form label,
+.dark .hospital-widget {
   color: #e2e8f0;
 }
-
-body.dark-mode .hospital-card,
-body.dark-mode .hospital-form input,
-body.dark-mode .hospital-form select,
-body.dark-mode .doctor-roster li {
+.dark .hospital-card,
+.dark .hospital-form input,
+.dark .hospital-form select,
+.dark .doctor-roster li {
   background: rgba(2, 6, 23, 0.7);
   border-color: rgba(148, 163, 184, 0.2);
 }
-
-body.dark-mode .pill {
+.dark .pill {
   background: rgba(99, 102, 241, 0.2);
   color: #cbd5f5;
 }
-
-body.dark-mode .status-pill {
+.dark .status-pill {
   background: rgba(22, 163, 74, 0.2);
   color: #86efac;
 }
