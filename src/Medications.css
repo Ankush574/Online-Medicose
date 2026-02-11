@@ -1,0 +1,441 @@
+.medications-shell {
+	width: 100%;
+	padding: clamp(1.5rem, 3vw, 2.75rem);
+	border-radius: 28px;
+	background: radial-gradient(circle at top, #eef2ff 0%, #f4f6fb 45%, #f1f5f9 100%);
+	box-shadow: 0 40px 90px rgba(15, 23, 42, 0.12);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.medications-embedded .medications-shell {
+	padding: 1.25rem;
+	border-radius: 22px;
+}
+
+.medications-hero {
+	background: linear-gradient(135deg, #4338ca, #6366f1 55%, #22d3ee);
+	border-radius: 24px;
+	padding: clamp(1.5rem, 3vw, 2.5rem);
+	display: flex;
+	justify-content: space-between;
+	gap: 1.5rem;
+	color: white;
+}
+
+.medications-hero h1 {
+	margin: 0.35rem 0;
+	font-size: clamp(1.75rem, 3vw, 2.6rem);
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.primary-btn,
+.ghost-btn,
+.danger-btn {
+	border-radius: 16px;
+	padding: 0.85rem 1.6rem;
+	font-weight: 600;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	background: none;
+}
+
+.primary-btn {
+	background: white;
+	color: #312e81;
+	box-shadow: 0 15px 35px rgba(15, 23, 42, 0.25);
+}
+
+.primary-btn:hover,
+.ghost-btn:hover,
+.danger-btn:hover {
+	transform: translateY(-2px);
+}
+
+.ghost-btn {
+	border-color: rgba(255, 255, 255, 0.4);
+	color: white;
+	background: transparent;
+}
+
+.danger-btn {
+	background: rgba(239, 68, 68, 0.1);
+	color: #b91c1c;
+	border: none;
+}
+
+.medications-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1rem;
+}
+
+.medication-metric-card {
+	background: white;
+	border-radius: 20px;
+	padding: 1.5rem;
+	box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+	border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.metric-label {
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 0.7rem;
+	color: #94a3b8;
+	margin: 0;
+}
+
+.metric-value {
+	margin: 0.35rem 0 0;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.metric-meta {
+	margin: 0.15rem 0 0;
+	color: #475569;
+	font-size: 0.85rem;
+}
+
+.medications-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+	gap: 1.5rem;
+}
+
+.medications-primary,
+.medications-secondary {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.toast {
+	border-radius: 16px;
+	padding: 1rem 1.25rem;
+	font-weight: 600;
+}
+
+.toast.success {
+	background: rgba(16, 185, 129, 0.15);
+	color: #0f766e;
+	border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.medication-board,
+.schedule-section,
+.composer-card,
+.refill-alert-card,
+.tips-card {
+	background: white;
+	border-radius: 24px;
+	padding: 1.5rem;
+	box-shadow: 0 25px 55px rgba(15, 23, 42, 0.08);
+	border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.section-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.medication-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1rem;
+}
+
+.medication-card {
+	border: 1px solid #e2e8f0;
+	border-radius: 20px;
+	padding: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	background: #f8fafc;
+}
+
+.medication-card header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.medication-card dl {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.5rem 1rem;
+	margin: 0;
+}
+
+.medication-card dt {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #94a3b8;
+}
+
+.medication-card dd {
+	margin: 0.15rem 0 0;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+.medication-card footer {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.chip {
+	border-radius: 999px;
+	padding: 0.35rem 0.75rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	background: rgba(15, 23, 42, 0.05);
+	color: #0f172a;
+}
+
+.chip-success {
+	background: rgba(34, 197, 94, 0.15);
+	color: #15803d;
+}
+
+.chip-warning {
+	background: rgba(234, 179, 8, 0.2);
+	color: #92400e;
+}
+
+.schedule-count {
+	border-radius: 999px;
+	padding: 0.35rem 0.85rem;
+	background: rgba(99, 102, 241, 0.12);
+	color: #4338ca;
+	font-weight: 600;
+}
+
+.schedule-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.schedule-list li {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.9rem 1rem;
+	border-radius: 16px;
+	border: 1px solid #e2e8f0;
+	background: #f8fafc;
+}
+
+.schedule-list strong {
+	font-size: 1rem;
+}
+
+.schedule-meta {
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	color: #475569;
+}
+
+.composer-card form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9rem;
+}
+
+.composer-card label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+.composer-card input,
+.composer-card select {
+	border-radius: 14px;
+	border: 1px solid #d7ddea;
+	padding: 0.75rem 1rem;
+	font-size: 0.95rem;
+}
+
+.field-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 0.75rem;
+}
+
+.schedule-editor {
+	border: 1px dashed #c7d2fe;
+	border-radius: 16px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.schedule-editor__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.time-row {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.checkbox-field {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.composer-actions {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.composer-placeholder {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	text-align: left;
+}
+
+.alert-list,
+.tips-card ul {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.alert-list li,
+.tips-card li {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: center;
+}
+
+.alert-list li p,
+.tips-card li p {
+	margin: 0.15rem 0 0;
+	color: #475569;
+}
+
+.tips-card .tip-icon {
+	width: 36px;
+	height: 36px;
+	border-radius: 12px;
+	background: rgba(99, 102, 241, 0.1);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1rem;
+}
+
+.empty-state {
+	border: 2px dashed #c7d2fe;
+	padding: 2rem;
+	border-radius: 20px;
+	text-align: center;
+	background: rgba(99, 102, 241, 0.05);
+}
+
+.empty-illustration {
+	font-size: 2.5rem;
+}
+
+.muted {
+	color: #94a3b8;
+	margin: 0;
+}
+
+.error-text {
+	color: #dc2626;
+	font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+	.medications-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+.dark .medications-shell,
+.dark .medications-hero,
+.dark .medication-board,
+.dark .schedule-section,
+.dark .composer-card,
+.dark .refill-alert-card,
+.dark .tips-card,
+.dark .medication-metric-card,
+.dark .medication-card {
+	background: rgba(15, 23, 42, 0.92);
+	color: #e2e8f0;
+	border-color: rgba(148, 163, 184, 0.2);
+	box-shadow: 0 35px 80px rgba(2, 6, 23, 0.85);
+}
+.dark .medication-card dd,
+.dark .metric-value,
+.dark .schedule-list strong {
+	color: #f8fafc;
+}
+.dark .metric-label,
+.dark .metric-meta,
+.dark .medication-card dt,
+.dark .schedule-meta,
+.dark .alert-list li p,
+.dark .tips-card li p {
+	color: #cbd5f5;
+}
+.dark .schedule-list li,
+.dark .medication-card {
+	background: rgba(15, 23, 42, 0.65);
+}
+.dark .primary-btn {
+	background: rgba(255, 255, 255, 0.15);
+	color: #e0e7ff;
+}
+.dark .ghost-btn {
+	border-color: rgba(148, 163, 184, 0.3);
+	color: #e0e7ff;
+}
+.dark .chip {
+	background: rgba(148, 163, 184, 0.2);
+	color: #e2e8f0;
+}
+.dark .chip-success {
+	background: rgba(34, 197, 94, 0.2);
+	color: #bbf7d0;
+}
+.dark .chip-warning {
+	background: rgba(234, 179, 8, 0.25);
+	color: #fde68a;
+}
+

@@ -1,0 +1,355 @@
+/* Modern styling for doctor workspace */
+
+.doctor-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 32px;
+  background: linear-gradient(120deg, #4c1d95, #7c3aed, #f43f5e);
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  box-shadow: 0 30px 80px rgba(76, 29, 149, 0.25);
+}
+
+.doctor-hero__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.45), transparent 55%);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.doctor-hero__left {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.doctor-hero__left h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0;
+}
+
+.doctor-hero__lead {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 540px;
+}
+
+.doctor-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.doctor-hero__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.doctor-hero__right {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.doctor-hero__card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.doctor-hero__card h3 {
+  margin: 6px 0 4px;
+  font-size: 1.35rem;
+}
+
+.doctor-hero__card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.doctor-hero__card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.doctor-hero__card--accent {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.doctor-hero__card--wide {
+  grid-column: span 2;
+}
+
+.doctor-hero__card-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doctor-hero__card-row button {
+  border: none;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.doctor-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.doctor-shortcut {
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 18px;
+  padding: 18px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-shortcut:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(99, 102, 241, 0.15);
+}
+
+.doctor-shortcut__icon {
+  font-size: 1.8rem;
+}
+
+.doctor-shortcut__body p {
+  margin: 0;
+  font-weight: 600;
+  color: #111827;
+}
+
+.doctor-shortcut__body span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.doctor-shortcut__cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4c1d95;
+}
+
+.doctor-section-card {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .doctor-hero {
+    padding: 24px;
+  }
+
+  .doctor-hero__right {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-hero__card--wide {
+    grid-column: span 1;
+  }
+}
+
+.action-secondary:hover {
+  background: #d1d5db;
+}
+
+/* Appointments List */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #4f46e5;
+}
+
+.appointment-left {
+  flex: 0 0 200px;
+}
+
+.appointment-left h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.appointment-left p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.appointment-middle {
+  flex: 1;
+}
+
+.appointment-notes {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.appointment-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apt-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.apt-btn.complete {
+  background: #10b981;
+  color: white;
+}
+
+.apt-btn.complete:hover {
+  background: #059669;
+}
+
+.apt-btn.reschedule {
+  background: #f59e0b;
+  color: white;
+}
+
+.apt-btn.reschedule:hover {
+  background: #d97706;
+}
+
+/* Reports Grid */
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.report-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.report-card:hover {
+  border-color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+}
+
+.report-card h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.report-card p {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.report-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.report-btn:hover {
+  background: #4338ca;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    flex: 0 1 48%;
+    font-size: 13px;
+    padding: 12px 10px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .appointment-item {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .appointment-left {
+    flex: 1;
+  }
+
+  .appointment-right {
+    flex-direction: row;
+  }
+
+  .patients-table {
+    font-size: 12px;
+  }
+
+  .patients-table th,
+  .patients-table td {
+    padding: 10px;
+  }
+}
