@@ -1,5 +1,7 @@
 # Online Medicose - Modern Healthcare & Medication Management Platform
 
+🚀 **Live Demo:** https://online-medicose-d9tjo2spg-ankush-yadavs-projects-4a5f752f.vercel.app/
+
 ## Overview
 Online Medicose is a full-stack healthcare and medication management platform built with React, Node.js, Express, and MongoDB. It supports patients, doctors, and pharmacists with:
 - Medication tracking and reminders
